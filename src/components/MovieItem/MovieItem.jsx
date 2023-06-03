@@ -1,5 +1,6 @@
 import React from 'react';
 import { Desc, Span, Wrapper } from './MovieItem.styled';
+import PropTypes from 'prop-types';
 
 const MovieItem = ({
   film: { title, poster_path, vote_average, overview, genres },
@@ -27,6 +28,14 @@ const MovieItem = ({
       </Desc>
     </Wrapper>
   );
+};
+
+MovieItem.propTypes = {
+  title: PropTypes.string,
+  poster_path: PropTypes.string,
+  vote_average: PropTypes.number,
+  overview: PropTypes.string,
+  genres: PropTypes.array,
 };
 
 export default MovieItem;

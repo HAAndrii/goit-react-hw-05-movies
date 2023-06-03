@@ -21,6 +21,7 @@ const MovieDetailsPage = () => {
       <LinkBack to={location.state ? location.state : '/'}>
         Back to movies
       </LinkBack>
+
       {movie && <MovieItem film={movie}></MovieItem>}
       <h2>Additional information</h2>
       <Ul>

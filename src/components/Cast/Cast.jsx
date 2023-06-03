@@ -8,15 +8,9 @@ const Cast = () => {
   const { movieId } = useParams();
 
   useEffect(() => {
-    setTimeout(() => {
-      FethMovies(`movie/${movieId}/credits`).then(mov => {
-        setCast(mov.cast);
-      });
-    }, 2000);
-
-    // FethMovies(`movie/${movieId}/credits`).then(mov => {
-    //   setCast(mov.cast);
-    // });
+    FethMovies(`movie/${movieId}/credits`).then(mov => {
+      setCast(mov.cast);
+    });
   }, [movieId]);
 
   return (
